@@ -17,7 +17,7 @@
                 $table->bigIncrements('id');
                 $table->unsignedBigInteger('user_id');
                 $table->string('title');
-                $table->string('description')->nullable();
+                $table->longText('description')->nullable();
                 $table->enum('status', ['pending', 'in-progress', 'cancelled', 'completed'])->default('pending');
                 $table->timestamps();
             });
